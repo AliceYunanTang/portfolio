@@ -6,7 +6,7 @@ function addHorizontalScroll(event, delta) {
 
 
 $(document).ready(function() {
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth > 768) {
     $('body').on('mousewheel', addHorizontalScroll);
 
     $('body').on('keydown', function(event) {
@@ -21,7 +21,7 @@ $(document).ready(function() {
 });
 
 $(window).resize(function(){
-  if (window.innerWidth >= 768 ){
+  if (window.innerWidth > 768 ){
     $('body').on('mousewheel', addHorizontalScroll);
   } else {
     $('body').off('mousewheel', addHorizontalScroll);
