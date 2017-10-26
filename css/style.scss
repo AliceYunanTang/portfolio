@@ -67,6 +67,7 @@ body {
   height: 100vh;
   background-color: $color-yellow-light;
   overflow: hidden;
+  position: relative;
 }
 
 span {
@@ -332,8 +333,6 @@ span {
       width: 100%;
     }
   }
-
-
 }
 
 

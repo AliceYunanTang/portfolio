@@ -6,24 +6,23 @@ function addHorizontalScroll(event, delta) {
 
 
 $(document).ready(function() {
-  if (window.innerWidth > 768) {
-    $('body').on('mousewheel', addHorizontalScroll);
+  if ($(window).width() > 768) {
+    $('html, body').on('mousewheel', addHorizontalScroll);
 
-    $('body').on('keydown', function(event) {
+    $('html, body').on('keydown', function(event) {
       if (event.keyCode === 39 || event.keyCode === 40) {
           this.scrollLeft += 80;
       } else if (event.keyCode === 37 || event.keyCode === 38) {
         this.scrollLeft -= 80;
       }
     });
-
   }
 });
 
 $(window).resize(function(){
-  if (window.innerWidth > 768 ){
-    $('body').on('mousewheel', addHorizontalScroll);
+  if ($(window).width() > 768 ){
+    $('html, body').on('mousewheel', addHorizontalScroll);
   } else {
-    $('body').off('mousewheel', addHorizontalScroll);
+    $('html, body').off('mousewheel', addHorizontalScroll);
   }
-})
+});

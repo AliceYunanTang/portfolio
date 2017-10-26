@@ -20,7 +20,8 @@ body {
   width: 5200px;
   height: 100vh;
   background-color: #f1c40f;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 span.is-yellow-lighter {
   color: #f1c40f; }
